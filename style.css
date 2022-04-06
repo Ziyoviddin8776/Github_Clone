@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+.window {
+  margin-bottom: 5rem;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.menu {
+  background-color: blue;
+  margin-bottom: 2rem;
+}
+.header {
+  padding: 2rem 0;
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+}
+.box {
+  border: 1px solid gray;
+  padding: 4rem 2rem;
+  margin-bottom: 5rem;
+}
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.userName {
+  font-size: 2rem;
+  opacity: 0.9;
+  margin: 2rem 0;
+}
+.input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+}
+.input:focus {
+  outline: 2px solid blue;
+}
+.magicGithub {
+  font-size: 2rem;
+  background-color: #f0f0f0;
+  padding: 3rem 0;
+  text-align: center;
+}
+.rezult {
+  display: none;
+}
+.flex {
+  display: flex;
+  gap: 3%;
+}
+.left {
+  width: 22%;
+}
+.left img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+.right {
+  width: 75%;
+}
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.button {
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  font-size: 1.6rem;
+}
+.button:first-child {
+  background-color: blue;
+}
+.button:nth-child(2) {
+  background-color: grey;
+}
+.button:nth-child(3) {
+  background-color: rgb(64, 165, 64);
+}
+.button:nth-child(4) {
+  background-color: rgb(91, 188, 214);
+}
+a {
+  text-decoration: none;
+}
+.button__view {
+  margin-top: 1rem;
+  width: 22%;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+.table {
+  margin-top: 4rem;
+  border: 1px solid gray;
+  border-radius: 1rem;
+}
+.bosqich {
+  font-size: 2rem;
+  padding: 1.5rem;
+  font-weight: bold;
+}
+.bosqich:not(:last-child) {
+  border-bottom: 1px solid gray;
+}
+
+.repos {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: -3rem;
+}
+.repo {
+  border: 1px solid gray;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 2rem;
+}
+.name__repo {
+  width: 50%;
+  font-size: 2rem;
+  color: blue;
+}
+.reposi {
+  text-decoration: none;
+}
+.xato {
+  font-size: 2rem;
+  background-color: #f5cbd3;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .flex {
+    display: flex;
+    gap: 3%;
+    justify-content: space-around;
+  }
+  .left {
+    width: 40%;
+  }
+  .left img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .right {
+    width: 57%;
+  }
+  .buttons {
+    justify-content: space-around;
+  }
+  .buttons:first-child .button {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    width: 13rem;
+    text-align: center;
+  }
+
+  .buttons:first-child {
+    margin-top: 2rem;
+  }
+  .button__view {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .flex {
+    display: flex;
+    gap: 3%;
+    flex-wrap: wrap;
+  }
+  .left {
+    width: 100%;
+  }
+  .left img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  .right {
+    width: 100%;
+  }
+  .buttons:first-child {
+    margin-top: 2rem;
+  }
+  .button__view {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .window {
+    margin-bottom: 2rem;
+  }
+  .container {
+    width: 95%;
+  }
+  .menu {
+    margin-bottom: 2rem;
+  }
+  .header {
+    font-size: 2rem;
+  }
+  .box {
+    padding: 2rem 1rem;
+    margin-bottom: 3rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .userName {
+    font-size: 1.6rem;
+  }
+  .input {
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .magicGithub {
+    font-size: 2rem;
+    background-color: #f0f0f0;
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .flex {
+    display: flex;
+    gap: 3%;
+    flex-wrap: wrap;
+  }
+  .left {
+    width: 100%;
+  }
+  .left img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .right {
+    width: 100%;
+  }
+  .buttons {
+    justify-content: space-around;
+    width: 100%;
+  }
+  .button {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    width: 13rem;
+    text-align: center;
+  }
+
+  .repo__button {
+    width: 9rem;
+  }
+
+  .button__view {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+
+  .table {
+    margin-top: 2rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+  }
+  .bosqich {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+
+  .repos {
+    font-size: 3rem;
+    margin-top: -1rem;
+  }
+  .repo {
+    padding: 2rem;
+    display: flex;
+    margin-top: 2rem;
+  }
+  .name__repo {
+    text-align: center;
+    width: 100%;
+  }
+  a {
+    width: 100%;
+  }
+  .xato {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+}
