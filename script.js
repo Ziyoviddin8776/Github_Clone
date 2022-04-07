@@ -20,16 +20,20 @@ ${data.name} </a></div>
 let inputQiymat = function () {
   if (inputVal.value) {
     fetch(`https://api.github.com/users/${inputVal.value}`)
-      .then(function (response) {
-        console.log(response);
-        if (!response.ok) {
-          throw new Error("Foydalanuvchi topilmadi");
-        } else {
+      .then(
+        function (response) {
+          if (!response.ok) {
+            throw new Error("Foydalanuvchi topilmadi");
+          }
+          return response.json();
+        },
+        function (error) {
+          if (!response.ok && error) {
+            throw new Error("Foydalanuvchi topilmadi");
+          }
         }
-        return response.json();
-      })
+      )
       .then(function (res) {
-        console.log(res);
         document.querySelector(".magicGithub").style.display = "none";
         document.querySelector(".rezult").style.display = "block";
         document.querySelector(".user__img").src = `${res.avatar_url}`;
@@ -70,8 +74,6 @@ let inputQiymat = function () {
                 renderFunc(val);
               });
             });
-        } else {
-          console.log("Salom xato");
         }
       })
       .catch(function (error) {
